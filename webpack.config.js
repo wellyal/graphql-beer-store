@@ -1,18 +1,35 @@
-const path = require('path')
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './index.js',
 
   output: {
     path: path.resolve('dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/public/'
   },
 
   module: {
     rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader'
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [ "es2015", "react" ]
+          }
+        }
+      },
+      {
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader',
+          options: {
+            attrs: [':data-src']
+          }
+        }
       }
     ]
   }
