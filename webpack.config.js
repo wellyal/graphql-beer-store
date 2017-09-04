@@ -5,9 +5,13 @@ module.exports = {
   entry: './index.js',
 
   output: {
-    path: path.resolve('dist'),
+    path: path.resolve('public'),
     filename: 'bundle.js',
     publicPath: '/public/'
+  },
+
+  resolve: {
+    modules: ['node_modules', 'src']
   },
 
   module: {
@@ -30,7 +34,19 @@ module.exports = {
             attrs: [':data-src']
           }
         }
-      }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          require.resolve('style-loader'),
+          {
+            loader: require.resolve('css-loader'),
+            options: {
+              importLoaders: 1,
+            },
+          },
+        ],
+      },
     ]
   }
 }

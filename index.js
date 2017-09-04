@@ -1,10 +1,5 @@
 import React from 'react'
-import {render} from 'react-dom'
+import { render } from 'react-dom'
+import Home from 'components/pages/Home'
 
-class App extends React.Component {
-  render () {
-    return <p>POW</p>
-  }
-}
-
-render(<App/>, document.getElementById('app'))
+render(<Home />, document.getElementById('app'))
