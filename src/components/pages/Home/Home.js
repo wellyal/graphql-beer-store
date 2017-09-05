@@ -1,9 +1,11 @@
 import React from 'react'
+import Topbar from 'components/organisms/Topbar'
+
 import './Home.css'
 
 const Home = () => (
   <section>
-    <h1>Home</h1>
+    <Topbar />
   </section>
 )
 
