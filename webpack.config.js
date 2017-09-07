@@ -1,17 +1,23 @@
 const webpack = require('webpack');
 const path = require('path');
 
+const publicPath = '/';
+
 module.exports = {
   entry: './index.js',
 
   output: {
     path: path.resolve('public'),
     filename: 'bundle.js',
-    publicPath: '/public/'
+    publicPath: publicPath
   },
 
   resolve: {
     modules: ['node_modules', 'src']
+  },
+
+  devServer: {
+    inline: true
   },
 
   module: {
