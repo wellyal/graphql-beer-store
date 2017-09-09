@@ -6,6 +6,10 @@
   margin: 15px;
 }
 
-.content-container {
-  margin-top: 20px;
+.head-container {
+  margin-bottom: 40px;
+}
+
+.row {
+  margin-bottom: 20px;
 }
