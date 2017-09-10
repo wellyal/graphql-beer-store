@@ -2,11 +2,11 @@ import React from 'react'
 
 import './Input.css'
 
-const Input = () => (
+const Input = props => (
   <div className="input-container">
-    <input required id="123" type="text" />
-    <label className="label-field" htmlFor="123">
-      User
+    <input required {...props}/>
+    <label className="label-field" htmlFor={props.id}>
+      {props.label}
     </label>
   </div>
 )

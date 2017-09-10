@@ -6,6 +6,12 @@
   height: 50px;
   width: 300px;
   cursor: pointer;
+  color: #000;
+}
+
+.btn.btn-secondary {
+  width: 100px;
+  border: 1px solid #fcd500;
 }
 
 .btn:hover {

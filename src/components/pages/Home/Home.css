@@ -1,5 +1,4 @@
 .container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,6 +9,21 @@
   margin-bottom: 40px;
 }
 
-.row {
+.form-inline {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.bg-danger, .bg-info {
+  padding: 15px;
   margin-bottom: 20px;
+}
+
+.submit-btn {
+  margin-left: 5px;
+}
+
+.footer-btn {
+  margin-top: 50px;
 }

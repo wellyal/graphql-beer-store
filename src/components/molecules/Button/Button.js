@@ -5,7 +5,7 @@ import './Button.css'
 const Button = props => {
   return (
     <button className='btn' {...props}>
-      Get your Beer!
+      {props.children}
     </button>
   )
 }

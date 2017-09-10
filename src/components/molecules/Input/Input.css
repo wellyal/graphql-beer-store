@@ -3,7 +3,7 @@
   font-size: 18px;
   color: #ccc;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #fcd500;
   border-radius: 4px;
   display: inline-block;
   height: 50px;
@@ -28,8 +28,8 @@
 .input-container input:focus ~ .label-field,
 .input-container input:active ~ .label-field,
 .input-container input:valid ~ .label-field {
-  padding-bottom: 25px;
-  font-size: 12px;
+  padding-bottom: 30px;
+  font-size: 10px;
   color: #333;
   transition: all .2s;
 }

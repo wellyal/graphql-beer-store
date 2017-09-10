@@ -1,0 +1,12 @@
+.container-map {
+  width: 100%;
+}
+
+.map {
+  height: 400px;
+}
+
+.status-bar {
+  text-align: center;
+  background: #EEE9E9;
+}
