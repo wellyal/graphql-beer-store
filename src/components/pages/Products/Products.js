@@ -6,6 +6,7 @@ import './Products.css'
 
 export default class Products extends PureComponent {
   render() {
+    console.log(this.props.test)
     return (
       <div>
 
@@ -23,7 +24,7 @@ export default class Products extends PureComponent {
             </figure>
 
             <div className="item-footer">
-              <button className="btn-minus fa fa-minus-square" />
+              <button onClick={this.props.toggleTest} className="btn-minus fa fa-minus-square" />
               <input type="number" min="0" max="99"/>
               <button className="btn-plus fa fa-plus-square-o" />
             </div>

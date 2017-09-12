@@ -11,8 +11,13 @@
   border-radius: 15px;
   height: 250px;
   width: 250px;
-  box-shadow: 2px 2px 9px 2px #ddd;
 }
+
+.item:hover {
+  box-shadow: 2px 2px 9px 2px #ddd;
+  cursor: pointer;
+}
+
 
 .item-title {
 
