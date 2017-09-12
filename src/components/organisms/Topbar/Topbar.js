@@ -4,8 +4,8 @@ import './Topbar.css'
 
 const Topbar = () => (
   <header className="header-container">
-    <div className="header-logo">Logotipo</div>
-    <div className="header-cart">Carrinho</div>
+    <div className="header-logo">Logo</div>
+    <div className="header-cart fa fa-cart-plus"></div>
   </header>
 )
 
