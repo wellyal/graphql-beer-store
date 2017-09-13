@@ -1,0 +1,23 @@
+.btn {
+  border: 1px solid #fcd500;
+  font-size: 20px;
+  background-color: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #000;
+  opacity: .8;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.btn.primary {
+  color: #fcd500;
+}
+
+.btn.secondary {
+  height: 50px;
+  width: 300px;
+  background: #fcd500;
+}

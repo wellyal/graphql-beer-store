@@ -46,6 +46,10 @@ module.exports = {
         include: __dirname,
       },
       {
+        test: /\.(woff|woff2|eot|ttf)$/i,
+        loader: "file-loader?name=fonts/[name]-[hash].[ext]"
+      },
+      {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         use: {

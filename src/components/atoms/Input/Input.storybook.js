@@ -3,11 +3,16 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import centered from '@storybook/addon-centered'
 
-import Button from './Button'
+import Input from './Input'
 
-storiesOf('Button')
+storiesOf('Input')
   .addDecorator(centered)
   .addWithInfo(
     'default',
-    () => <Button />
+    () => <Input type="text"
+            id="address"
+            label="Address"
+            type="text"
+            required
+          />
   )

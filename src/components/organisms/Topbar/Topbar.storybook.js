@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 
 import Topbar from './Topbar'
 
-storiesOf('Topbar')
+storiesOf('Topbar', module)
   .addWithInfo(
     'default',
     () => <Topbar />

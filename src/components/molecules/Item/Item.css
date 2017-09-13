@@ -1,0 +1,57 @@
+.items-list {
+  margin: 30px;
+}
+
+.item {
+  text-align: center;
+  border: 1px solid #fcd500;
+  border-radius: 15px;
+  height: 250px;
+  width: 250px;
+}
+
+.item-header {
+  background: #fcd500;
+  color: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 8px 0;
+}
+
+.item:hover {
+  box-shadow: 2px 2px 9px 2px #ddd;
+}
+
+
+.item-title {
+
+}
+
+.item-value {
+
+}
+
+.item-figure {
+
+}
+
+.item-figure img {
+  height: 150px;
+  width: 150px;
+}
+
+.item-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-footer input {
+  height: 34px;
+  font-size: 22px;
+  width: 80px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  outline: none;
+}

@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+
 import './GoogleMap.css'
 
 const INITIAL_LOCATION = {

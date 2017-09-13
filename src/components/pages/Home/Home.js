@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import Topbar from 'components/organisms/Topbar'
 import Header from 'components/atoms/Header'
-import Input from 'components/molecules/Input'
-import Button from 'components/molecules/Button'
+import Input from 'components/atoms/Input'
+import Button from 'components/atoms/Button'
 import GoogleMap from 'components/organisms/GoogleMap'
 
 import './Home.css'
