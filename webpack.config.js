@@ -4,7 +4,7 @@ const path = require('path');
 const publicPath = '/';
 
 module.exports = {
-  entry: 'index.js',
+  entry: ['babel-polyfill', 'index.js'],
 
   output: {
     path: path.resolve('public'),
@@ -55,7 +55,8 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [ "es2015", "react", "stage-2" ]
+            presets: [ "es2015", "react", "stage-0" ],
+            plugins: ["transform-regenerator"]
           }
         }
       },
