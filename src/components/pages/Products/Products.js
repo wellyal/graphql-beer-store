@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import Topbar from 'components/organisms/Topbar'
-import Button from 'components/atoms/Button'
-import Item from 'components/molecules/Item'
+import Footer from 'components/organisms/Footer'
+import ListItems from 'components/organisms/ListItems'
 
 import './Products.css'
 
@@ -13,7 +13,9 @@ export default class Products extends PureComponent {
 
         <Topbar />
 
-        <Item />
+        <ListItems />
+
+        <Footer />
 
       </div>
     )

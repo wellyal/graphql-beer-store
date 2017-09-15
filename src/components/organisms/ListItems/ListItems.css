@@ -1,0 +1,7 @@
+.list-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow: auto;
+  height: calc(100vh - 140px);
+}

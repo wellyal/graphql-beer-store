@@ -1,13 +1,10 @@
-.items-list {
-  margin: 30px;
-}
-
 .item {
   text-align: center;
   border: 1px solid #fcd500;
   border-radius: 15px;
   height: 250px;
   width: 250px;
+  margin: 30px 15px;
 }
 
 .item-header {
