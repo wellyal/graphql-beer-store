@@ -18,7 +18,6 @@ export default class Home extends PureComponent {
 
     return (
       <section>
-        <Topbar />
         <main className="container">
           <section className="head-container">
 

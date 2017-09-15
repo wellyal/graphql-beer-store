@@ -11,8 +11,6 @@ export default class Products extends PureComponent {
     return (
       <div>
 
-        <Topbar />
-
         <ListItems />
 
         <Footer />

@@ -1,24 +1,27 @@
 {
   "name": "ventures-challenge",
   "version": "1.0.0",
-  "description": "",
+  "description": "ZX-Ventrures Challenge",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --inline --open --content-base=public",
+    "start": "webpack-dev-server --inline --hot --open --port=3000 --historyApiFallback --content-base=public",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["zx-ventures", "challenge", "react", "redux", "graphql", "apollo-client"],
+  "author": "Wellyngton Amaral Leitão",
   "license": "ISC",
   "dependencies": {
     "react": "^15.6.1",
     "react-apollo": "^1.4.15",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
-    "redux-actions": "^2.2.1"
+    "redux-actions": "^2.2.1",
+    "redux-saga": "^0.15.6"
   },
   "devDependencies": {
     "@storybook/addon-centered": "^3.2.7",
