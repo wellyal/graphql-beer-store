@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from 'components/atoms/Button'
+import { Link } from 'react-router-dom'
 
 import './Topbar.css'
 
@@ -8,7 +9,7 @@ const Topbar = () => (
     <div className="header-left fa fa-github"></div>
 
     <div className="header-right">
-      <span className="marker fa fa-map-marker" />
+      <Link to="/home" className="marker fa fa-map-marker" />
       <Button className="btn primary">Login</Button>
     </div>
   </header>

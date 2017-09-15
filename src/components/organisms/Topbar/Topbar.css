@@ -1,10 +1,10 @@
 .header-container {
   background: #000;
-  height: 60px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 20px;
   color: #fcd500;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .marker {
-  font-size: 30px;
-  margin: 0 15px;
+  font-size: 50px;
+  margin: 0 20px;
   cursor: pointer;
 }

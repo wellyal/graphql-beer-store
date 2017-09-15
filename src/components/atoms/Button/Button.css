@@ -6,6 +6,8 @@
   cursor: pointer;
   color: #000;
   opacity: .8;
+  height: 50px;
+  min-width: 65px;
 }
 
 .btn:hover {

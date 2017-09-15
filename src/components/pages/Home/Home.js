@@ -49,7 +49,7 @@ export default class Home extends PureComponent {
           />
 
           <div className="footer-btn">
-            <Button onClick={this.handleGetYourBeerClick} className="btn">Get your Beer!</Button>
+            <Button onClick={this.handleGetYourBeerClick} className="btn secondary">Get your Beer!</Button>
           </div>
         </main>
       </section>
@@ -65,5 +65,6 @@ export default class Home extends PureComponent {
 
   handleGetYourBeerClick = () => {
     this.props.toggleTest('meu')
+    this.props.history.push('/products')
   }
 }
