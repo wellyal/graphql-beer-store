@@ -14,6 +14,8 @@ export default class Home extends PureComponent {
   }
 
   render() {
+    console.log(this.props.test)
+
     return (
       <section>
         <Topbar />
@@ -48,7 +50,7 @@ export default class Home extends PureComponent {
           />
 
           <div className="footer-btn">
-            <Button type="submit" className="btn">Get your Beer!</Button>
+            <Button onClick={this.handleGetYourBeerClick} className="btn">Get your Beer!</Button>
           </div>
         </main>
       </section>
@@ -60,5 +62,9 @@ export default class Home extends PureComponent {
   handleFormSubmit = ev => {
     ev.preventDefault();
     this.setState({ search: this.state.currentLocation });
+  }
+
+  handleGetYourBeerClick = () => {
+    this.props.toggleTest('meu')
   }
 }

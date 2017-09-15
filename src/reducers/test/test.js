@@ -1,9 +1,6 @@
 import { createAction, handleActions } from 'redux-actions'
 
 export const actionTypes = {
-  REQUEST: 'ventures_challenge/test/REQUEST',
-  SUCCESS: 'ventures_challenge/test/SUCCESS',
-  FAILURE: 'ventures_challenge/test/FAILURE',
   TEST: 'ventures_challenge/test/TEST'
 }
 
@@ -23,30 +20,9 @@ const reducer = handleActions({
       ...state,
       test: true
     }
-  },
-  [actionTypes.REQUEST](state) {
-    return {
-      ...state,
-      isFetching: true
-    }
-  },
-  [actionTypes.SUCCESS](state, {payload}) {
-    return {
-      ...state,
-      isFetching: false,
-      success: true,
-      data: payload.data.authMock.data
-    }
-  },
-  [actionTypes.FAILURE](state, {payload}) {
-    return {
-      ...state,
-      isFetching: false,
-      error: payload
-    }
   }
 }, defaultState)
 
-export const toggleTest = () => testRequest()
+export const toggleTest = (test = "bla") => testRequest(test)
 
 export default reducer
