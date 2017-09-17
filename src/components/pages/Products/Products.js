@@ -6,12 +6,22 @@ import ListItems from 'components/organisms/ListItems'
 import './Products.css'
 
 export default class Products extends PureComponent {
+
+  componentWillMount() {
+    console.log('calling me')
+    if (!this.props.products.data) {
+      console.log('NO DATA AVAILABLE!')
+    }
+  }
+
   render() {
-    console.log(this.props.test)
+    const { data } = this.props.products
+
+    if (this.props.products)
     return (
       <div>
 
-        <ListItems />
+        <ListItems data={data}/>
 
         <Footer />
 

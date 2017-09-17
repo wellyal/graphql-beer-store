@@ -1,11 +1,11 @@
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { toggleTest } from 'reducers/test'
+import { getProductsByLocation } from 'reducers/products'
 
 import Home from './Home'
 
-const mapStateToProps = ({ test }) => ({ test })
+const mapStateToProps = ({ products }) => ({ products })
 
-const mapDispatchToProps = dispatch => bindActionCreators({ toggleTest }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ getProductsByLocation }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)

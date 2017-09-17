@@ -5,26 +5,18 @@
   margin: 15px;
 }
 
-.head-container {
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.form-inline {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-.bg-danger, .bg-info {
+.bg-danger,
+.bg-info {
   padding: 15px;
   margin-bottom: 20px;
 }
 
-.submit-btn {
-  margin-left: 5px;
-}
-
 .footer-btn {
   margin-top: 50px;
+}
+
+@media (max-width: 400px) {
+  .form-inline .footer-btn {
+    width: 100%;
+  }
 }

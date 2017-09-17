@@ -6,7 +6,7 @@ export const actionTypes = {
   ERROR: 'ventures_challenge/test/ERROR'
 }
 
-const testRequest = createAction(actionTypes.REQUEST)
+const productsRequest = createAction(actionTypes.REQUEST)
 
 const defaultState = {
   isFetching: false,
@@ -27,7 +27,7 @@ const reducer = handleActions({
       ...state,
       isFetching: false,
       success: true,
-      data: payload.data.data
+      data: payload.data
     }
   },
   [actionTypes.FAILURE](state, {payload}) {
@@ -39,6 +39,6 @@ const reducer = handleActions({
   }
 }, defaultState)
 
-export const toggleTest = (test = "bla") => testRequest(test)
+export const getProductsByLocation = (location) => productsRequest(location)
 
 export default reducer

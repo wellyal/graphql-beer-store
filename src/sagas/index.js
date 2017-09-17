@@ -1,9 +1,9 @@
 import { all, fork } from 'redux-saga/effects'
 
-import { watchTest } from './test'
+import { watchGetProductsByLocation } from './products'
 
 export default function* rootSaga() {
   yield all([
-    fork(watchTest)
+    fork(watchGetProductsByLocation)
   ])
 }

@@ -2,9 +2,15 @@
   text-align: center;
   border: 1px solid #fcd500;
   border-radius: 15px;
-  height: 250px;
+  height: 280px;
   width: 250px;
   margin: 30px 15px;
+}
+
+@media (max-width: 565px) {
+  .item {
+    width: 100%;
+  }
 }
 
 .item-header {
@@ -19,17 +25,11 @@
   box-shadow: 2px 2px 9px 2px #ddd;
 }
 
-
-.item-title {
-
-}
-
-.item-value {
-
-}
-
-.item-figure {
-
+.item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: calc(100% - 48px);
 }
 
 .item-figure img {
@@ -41,12 +41,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 10px;
 }
 
 .item-footer input {
   height: 34px;
   font-size: 22px;
-  width: 80px;
+  width: 100%;
   border: 1px solid #ccc;
   border-radius: 8px;
   text-align: center;

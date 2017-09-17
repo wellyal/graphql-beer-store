@@ -7,7 +7,6 @@
   color: #000;
   opacity: .8;
   height: 50px;
-  min-width: 65px;
 }
 
 .btn:hover {
@@ -16,10 +15,15 @@
 
 .btn.primary {
   color: #fcd500;
+  padding: 10px;
 }
 
 .btn.secondary {
-  height: 50px;
   width: 300px;
+  background: #fcd500;
+}
+
+.btn.icon {
+  width: 60px;
   background: #fcd500;
 }

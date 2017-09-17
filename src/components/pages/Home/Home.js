@@ -1,70 +1,58 @@
 import React, { PureComponent } from 'react'
 import Topbar from 'components/organisms/Topbar'
 import Header from 'components/atoms/Header'
-import Input from 'components/atoms/Input'
 import Button from 'components/atoms/Button'
+import SearchBar from 'components/molecules/SearchBar'
 import GoogleMap from 'components/organisms/GoogleMap'
+import Loader from 'components/atoms/Loader'
 
 import './Home.css'
 
 export default class Home extends PureComponent {
   state = {
-    currentLocation: '',
     search: ''
   }
 
+  componentWillReceiveProps(nextProps) {
+    const { error, success } = nextProps.products
+
+    if (success) {
+      this.props.history.push('/products')
+    } else if (error) {
+      /**
+        TODO:
+        - Show error message
+       */
+    }
+  }
+
   render() {
-    console.log(this.props.test)
+    const { isFetching } = this.props.products
+    if ( isFetching ) return <Loader />
 
     return (
       <section>
         <main className="container">
-          <section className="head-container">
 
-            <Header className="header h3">Choose your currently location</Header>
+          <Header className="header h3">Choose your currently location</Header>
 
-          </section>
+          <SearchBar setCurrentLocation={this.setCurrentLocation}/>
 
-          <section className="container-form">
-
-            <form className="form-inline" onSubmit={this.handleFormSubmit}>
-              <Input type="text"
-                id="address"
-                label="Address"
-                type="text"
-                onChange={this.handleInputChange}
-                value={this.state.currentLocation}
-                required
-              />
-
-              <div className="submit-btn">
-                <Button type="submit" className="btn btn-secondary fa fa-search"></Button>
-              </div>
-            </form>
-
-          </section>
-
-          <GoogleMap
-            search={this.state.search}
-          />
+          <GoogleMap search={this.state.search} />
 
           <div className="footer-btn">
-            <Button onClick={this.handleGetYourBeerClick} className="btn secondary">Get your Beer!</Button>
+            <Button onClick={this.handleGetYourBeerClick} className="btn secondary">
+              Get your Beer!
+            </Button>
           </div>
         </main>
       </section>
     )
   }
 
-  handleInputChange = ev => this.setState({ currentLocation: ev.target.value })
-
-  handleFormSubmit = ev => {
-    ev.preventDefault();
-    this.setState({ search: this.state.currentLocation });
-  }
+  setCurrentLocation = location => this.setState({ search: location })
 
   handleGetYourBeerClick = () => {
-    this.props.toggleTest('meu')
-    this.props.history.push('/products')
+    this.props.getProductsByLocation('meu')
   }
 }

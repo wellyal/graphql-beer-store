@@ -1,13 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import centered from '@storybook/addon-centered'
 import { withInfo } from '@storybook/addon-info'
 
 import Header from './Header'
 
 storiesOf('Header', module)
-  .addDecorator(centered)
   .add('header1',
     withInfo('')(() =>
       <Header className="header h1">Header1</Header>

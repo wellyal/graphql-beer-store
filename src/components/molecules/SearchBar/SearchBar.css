@@ -1,0 +1,27 @@
+.form-inline {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.form-inline .form-button {
+  margin-left: 10px;
+}
+
+@media (max-width: 400px) {
+  .form-inline .form-input,
+  .form-inline .input-container {
+    width: 100%;
+  }
+
+  .form-inline .form-button,
+  .form-inline .btn {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
+
+
