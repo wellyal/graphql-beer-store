@@ -6,7 +6,9 @@ import './Item.css'
 
 export default class Item extends PureComponent {
   render() {
-    const { title, price, imageUrl } = this.props.item
+    const { id, title, price, imageUrl } = this.props.item
+    this.id = id
+
     return (
       <div className="item">
 
@@ -23,7 +25,7 @@ export default class Item extends PureComponent {
 
           <div className="item-footer">
             <ButtonDecrease onClick={this.addItem} />
-            <input onChange={this.changeValue} maxLength="2" type="text" />
+            <input onBlur={this.updateQuantityItem} maxLength="2" type="text" />
             <ButtonIncrease onClick={this.removeItem} />
           </div>
 
@@ -33,13 +35,5 @@ export default class Item extends PureComponent {
     )
   }
 
-  addValue = ev => {
-
-  }
-
-  changeValue = ev => {
-    this.props.addQuantity()
-    console.log(ev.target.value)
-  }
-
+  updateQuantityItem = ev => this.props.addItemCart(this.id, ev.target.value)
 }

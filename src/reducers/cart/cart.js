@@ -1,33 +1,25 @@
 import { createAction, handleActions } from 'redux-actions'
 
 export const actionTypes = {
-  ADD_QUANTITY: 'ventures_challenge/cart/ADD_QUANTITY',
-  ADD_VALUE: 'ventures_challenge/cart/ADD_VALUE',
+  ADD_CART: 'ventures_challenge/cart/ADD_CART',
+  CLEAR_CART: 'ventures_challenge/cart/CLEAR_CART'
 }
 
-const addQuantityRequest = createAction(actionTypes.ADD_QUANTITY)
-const addValueRequest = createAction(actionTypes.ADD_VALUE)
+const addToCartRequest = createAction(actionTypes.ADD_CART)
+const clearCartRequest = createAction(actionTypes.CLEAR_CART)
 
-const defaultState = {
-  quantity: 0,
-  value: 0,
-  items: []
-}
+const defaultState = []
 
 const reducer = handleActions({
-  [actionTypes.ADD_QUANTITY](state, { payload }) {
-    return {
-      ...state
-    }
+  [actionTypes.ADD_CART](state, { payload }) {
+    return [ ...payload ]
   },
-  [actionTypes.ADD_VALUE](state, { payload }) {
-    return {
-      ...state,
-    }
+  [actionTypes.CLEAR_CART](state, { payload }) {
+    return []
   },
 }, defaultState)
 
-export const addQuantity = (quantity) => addQuantityRequest(quantity)
-export const addValue = (value) => addValueRequest(value)
+export const addToCart = (cartItems) => addToCartRequest(cartItems)
+export const clearCart = () => clearCartRequest()
 
 export default reducer

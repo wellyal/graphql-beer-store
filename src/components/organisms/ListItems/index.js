@@ -1,3 +1,3 @@
-import ListItems from './ListItems'
+import ListItems from './ListItems.container'
 
 export default ListItems
