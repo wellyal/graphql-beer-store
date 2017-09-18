@@ -1,3 +1,3 @@
-import Item from './Item.container'
+import Item from './Item'
 
 export default Item

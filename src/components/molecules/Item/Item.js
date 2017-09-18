@@ -35,5 +35,8 @@ export default class Item extends PureComponent {
     )
   }
 
-  updateQuantityItem = ev => this.props.addItemCart(this.id, ev.target.value)
+  updateQuantityItem = ev => {
+    const value = ev.target.value || 0
+    this.props.addItemCart(this.id, value)
+  }
 }
